@@ -1,0 +1,9 @@
+# Default owner
+* @parking-lima/team-backend
+
+# Security-related files
+/.github/workflows/ @parking-lima/team-security
+/Dockerfile @parking-lima/team-security
+
+# CODEOWNERS protection
+/.github/CODEOWNERS @parking-lima/team-security

@@ -1,0 +1,55 @@
+
+name: "Bug Report"
+description: "Reportar un error en Parking Lima"
+title: "[BUG] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: "Gracias por reportar un error."
+
+  - type: textarea
+    id: description
+    attributes:
+      label: "Descripción del problema"
+      description: "¿Qué está fallando?"
+      placeholder: "Describe el error encontrado"
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: "Pasos para reproducir"
+      placeholder: |
+        1. Ejecutar...
+        2. Enviar solicitud...
+        3. Observar error...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: "Comportamiento esperado"
+      placeholder: "¿Qué debería ocurrir?"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: environment
+    attributes:
+      label: "Entorno"
+      options:
+        - Local
+        - Docker
+        - Kubernetes
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: "Logs o evidencias"
+      description: "No incluir contraseñas ni tokens."
+      render: shell

@@ -1,0 +1,47 @@
+
+name: "Feature Request"
+description: "Solicitar una nueva funcionalidad"
+title: "[FEATURE] "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: objective
+    attributes:
+      label: "Objetivo"
+      description: "¿Qué funcionalidad necesitas?"
+      placeholder: "Implementar consulta de distritos"
+    validations:
+      required: true
+
+  - type: textarea
+    id: requirements
+    attributes:
+      label: "Requisitos funcionales"
+      placeholder: |
+        - Crear endpoint REST
+        - Consultar PostgreSQL
+        - Devolver respuesta JSON
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: "Criterios de aceptación"
+      placeholder: |
+        - Endpoint responde HTTP 200
+        - Retorna la lista de distritos
+        - Tests pasan correctamente
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: "Prioridad"
+      options:
+        - Low
+        - Medium
+        - High
+    validations:
+      required: true

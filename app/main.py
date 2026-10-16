@@ -2,6 +2,7 @@
 from fastapi import FastAPI
 
 from app.api.districts import router as districts_router
+from app.api.parkings import router as parkings_router
 
 app = FastAPI(
     title="Parking Lima - Parking Service",
@@ -10,7 +11,7 @@ app = FastAPI(
 )
 
 app.include_router(districts_router)
-
+app.include_router(parkings_router)
 
 @app.get("/")
 def root():

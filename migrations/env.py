@@ -6,7 +6,7 @@ from sqlalchemy import pool
 from alembic import context
 
 from app.database import Base, DATABASE_URL
-from app.models.district import District
+from app.models import district, parking, parking_space
 
 config = context.config
 
@@ -15,7 +15,6 @@ config.set_main_option(
     DATABASE_URL
 )
 
-target_metadata = Base.metadata
 
 # Interpret the config file for Python logging.
 # This line sets up loggers basically.

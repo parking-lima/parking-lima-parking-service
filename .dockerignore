@@ -7,5 +7,3 @@ __pycache__/
 *.pyc
 .pytest_cache/
 tests/
-migrations/
-alembic.ini
